@@ -32,12 +32,13 @@ a:hover {
 
 #banner {
     text-align: center;
-    background-image: url("images/fondobanner2.jpg");
+    background-image: url("images/fondobanner2.jpg");    
     background-size: cover;
     padding: 150px;
     color: white;
-    text-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 5px black;    
 }
+
 
 #banner h1 {
     color: white;
@@ -75,7 +76,7 @@ a:hover {
 .navbar {
     overflow: hidden;
     background-color: #333;
-    position: fixed;
+    position:fixed;
     top: 0;
     width: 100%;
 }
@@ -102,13 +103,8 @@ a:hover {
     text-decoration: underline;
 }
 
-.container{
-
-}
-.row{
 
 
-}
 .row-productos, .row-gustos{
     display: grid;
     grid-template-columns: auto auto auto;
