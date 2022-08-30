@@ -24,6 +24,10 @@ a:hover {
     color: purple;
 }
 
+.titulosPadding{
+    padding-top: 60px;
+}
+
 #banner {
     text-align: center;
     background-image: url(images/fondobanner2.jpg);    
