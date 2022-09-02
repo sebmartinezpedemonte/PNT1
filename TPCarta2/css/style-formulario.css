@@ -1,0 +1,105 @@
+#banner {
+    text-align: center;
+    background-image: url('../images/fondobanner.jpg');    
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 5px black;    
+}
+
+#banner h1 {
+    padding-top: 10px;
+    color: yellow;
+    font-size: 50px;
+}
+
+#banner p {
+    color: white;
+    opacity: 0.8;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+h2 {
+    background: Bisque;
+    color: rgb(107, 25, 39);
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 3px solid;
+    border-bottom-color: chocolate;
+    font-size: x-large;
+}
+
+.form {
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+}
+
+.contenedor-inputs {
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: darkgray;
+}
+
+label{
+    font-size: x-large;
+    margin-top: 10px;
+    color: green;
+}
+
+.input-100 {
+    width: 100%;
+}
+
+.input-45 {
+    width: 45%;
+}
+
+.registerbtn {
+    background: rgb(107, 25, 39);
+    color: white;
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer{
+    font-size: medium;
+}
