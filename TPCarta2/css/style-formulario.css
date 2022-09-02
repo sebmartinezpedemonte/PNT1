@@ -1,7 +1,7 @@
 #banner {
     text-align: center;
     background-image: url('../images/fondobanner.jpg');    
-    background-size: cover;
+    background-size:cover;
     color: white;
     text-shadow: 1px 1px 5px black;    
 }

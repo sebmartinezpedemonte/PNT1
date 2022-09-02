@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-formulario.css">
     <title>Formulario</title>
 </head>
 
@@ -14,28 +14,25 @@
         <a class="active" href="index.html">Inicio</a>
     </nav>
 
-    <nav id="banner" class="responsive">
+    <div id="banner" class="responsive">
         <h1>Heladeria Giuliano</h1>
         <p>Tu heladeria favorita del barrio</p>
-    </nav>
 
-    <form action="action_page.php">
-        <div class="container">
-            <p>Inicio de sesión</p>
+
+        <form action="action_page.php" class="form">
+
+            <h2>Inicio de sesión</h2>
             <hr>
-
-            <label for="email">Email</label>
-            <input type="email" placeholder="Ingrese su email" name="email" id="email" required>
-
-            <label for="pwd">Contraseña</label>
-            <input type="password" placeholder="Ingrese la contraseña" name="pwd" id="pwd" required minlength="8">
-        <input type="submit" value="Ingresar" class="registerbtn">
-        </div>
-
-        <div class="container signin">
-            <p>Si no tenes una cuenta. <a href="registroUsuarioV2.html">Registrarse</a>.</p>
-        </div>
-    </form>
+            <div class="contenedor-inputs">
+                <input type="email" placeholder="Ingrese su email" name="email" id="email" class="input-100" required>
+                <input type="password" placeholder="Ingrese la contraseña" name="pwd" id="pwd" class="input-100" required minlength="8">
+                <input type="submit" value="Ingresar" class="registerbtn">
+            </div>
+        </form>
+        <footer>
+            <p>Si no tenes una cuenta. <a href="registroUsuarioV2.html">Registrarse</a></p>
+        </footer>
+    </div>
 </body>
 
 </html>
