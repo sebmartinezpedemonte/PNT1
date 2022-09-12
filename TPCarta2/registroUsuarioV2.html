@@ -19,17 +19,19 @@
         <p>Tu heladeria favorita del barrio</p>
     
     
-        <form action="action_page.php" class="form">
+        <form name='registracion' onSubmit="return validacionContrasena();" class="form">
 
             <h2>Registrate para hacer tu pedido</h2>
         
             <div class="contenedor-inputs">
             
-            <input type="text" id="nom" name="nombre" placeholder="Nombre" class="input-100" required autofocus />
+            <input type="text" id="nom" name="nombre" placeholder="Nombre" class="input-100" required />
             <input type="text" id="nom" name="apellido" placeholder="Apellido" class="input-100" required />
             <input type="email" id="email" placeholder="Ingrese su email" name="email" class="input-100"  required>
             <input type="password" id="pwd" placeholder="Ingrese la contraseña" name="pwd" class="input-100" required minlength="8">
+            
             <input type="password" id="pwd-repeat" placeholder="Repita la contraseña" name="pwd-repeat" class="input-100"  required minlength="8">
+            
             <label for="birthday">Fecha de nacimiento:</label>
             <input type="date" id="birthday" name="birthday" class="input-45" required />
             <input type="checkbox" id="terms&conditions" name="terms&conditions" value="ok">
@@ -47,7 +49,7 @@
     </div>
    
     
-
+    <script src="js/validacionFormulario.js"></script>
 </body>
 
 </html>
