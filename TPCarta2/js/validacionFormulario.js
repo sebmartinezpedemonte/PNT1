@@ -1,6 +1,6 @@
 function validacionContrasena(){
-    var contrasena = document.getElementById('pwd');
-    var repetir = document.getElementById('pwd-repeat');
+    var contrasena = document.getElementById('pwd').value;
+    var repetir = document.getElementById('pwd-repeat').value;
 
     if (contrasena == repetir){
         return true;
