@@ -2,7 +2,7 @@ function validacionContrasena(){
     var contrasena = document.getElementById('pwd');
     var repetir = document.getElementById('pwd-repeat');
 
-    if(contrasena == repetir){
+    if (contrasena.equals(repetir)){
         return true;
     }else{
         alert('Las contraseñas deben ser iguales!!!');
