@@ -2,22 +2,20 @@ function validarFormulario() {
 
     if (confirm("¿Está seguro de enviar el formulario?")) {
 
-        let nombreValido = ValidaLetra(document.getElementById('nombre'));
-        let apellidoValido = ValidaLetra(document.getElementById('apellido'));
-        let emailValido = ValidaEmail(document.getElementById('email'));
-        let contrasenaValida = ValidaContrasena(document.getElementById('pwd'), document.getElementById('pwd-repeat'));
-        //let fechaValida = ValidaFecha(document.getElementById('birthday'));        
-
-        if (nombreValido) {
-            if (apellidoValido) {
-                //if(fechaValida){
-                if (emailValido) {
-                    if (contrasenaValida) {
-                        alert('Datos enviados correctamente!');
-                        return true;
+        if (ValidaLetra(document.getElementById('nombre'))) {
+            if (ValidaLetra(document.getElementById('apellido'))) {
+                if (ValidaEmail(document.getElementById('email'))) {
+                    if (ValidaContrasena(document.getElementById('pwd'))) {
+                        if (ValidaRepetir(document.getElementById('pwd'), document.getElementById('pwd-repeat'))) {
+                            if (ValidaEdad(document.getElementById('birthday'))) {
+                                if (ValidaTyC(document.getElementById('tyc'))) {
+                                    alert('Datos enviados correctamente!');
+                                    return true;
+                                }
+                            }
+                        }
                     }
                 }
-                //}                
             }
         }
         return false;
@@ -33,7 +31,7 @@ function ValidaLetra(texto) {
         return true;
     }
     else {
-        alert('Ingresaste un caracter invalido!');
+        alert('Ingresaste un ' + texto.name + ' invalido!');
         texto.focus();
         return false;
     }
@@ -52,29 +50,62 @@ function ValidaEmail(email) {
     }
 }
 
-function ValidaContrasena(contrasena, repetir) {
+function ValidaContrasena(contrasena) {
+    let cantCaracter = contrasena.value.length;
+
+    if (cantCaracter >= 4 && cantCaracter <= 8) {
+        return true;
+    } else {
+        alert('Las contraseña debe tener entre 4 y 8 caracteres!!!');
+        contrasena.value = '';
+        contrasena.focus();
+        return false;
+    }
+}
+
+function ValidaRepetir(contrasena, repetir) {
 
     if (contrasena.value == repetir.value) {
         return true;
     } else {
         alert('Las contraseñas deben ser iguales!!!');
+        repetir.value = '';
         repetir.focus();
         return false;
     }
 }
 
-function ValidaFechaNac() {
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
-    var yyyy = today.getFullYear();
-    if(dd<10){
-      dd='0'+dd
-    } 
-    if(mm<10){
-      mm='0'+mm
-    } 
-    
-    today = yyyy+'-'+mm+'-'+dd;
-    document.getElementById("datefield").setAttribute("max", today);
+function ValidaEdad(fechaNacimiento) {
+    let today = new Date().toISOString().slice(0, 10)
+
+    const startDate = fechaNacimiento.value;
+    const endDate = today;
+
+    const diffInMs = new Date(endDate) - new Date(startDate)
+    const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+
+    if (startDate != '') {
+        if (diffInDays >= 12) {
+            return true;
+        } else {
+            alert('La edad mínima para registrarse es 12 años!!!');
+            fechaNacimiento.focus();
+            return false;
+        }
+    } else {
+        alert('Ingrese una fecha válida!!!');
+        fechaNacimiento.focus();
+        return false;
+    }
+}
+
+function ValidaTyC(respuesta) {
+    console.log(respuesta.checked);
+    if (respuesta.checked) {
+        return true;
+    } else {
+        alert('Debe aceptar los Términos y Condiciones!!!');
+        document.getElementById('tyc').focus();
+        return false;
+    }
 }

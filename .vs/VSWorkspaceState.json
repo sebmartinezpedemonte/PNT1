@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\TPCarta2",
-    "\\TPCarta2\\css"
+    "\\TPCarta2\\css",
+    "\\TPCarta2\\js"
   ],
-  "SelectedNode": "\\TPCarta2\\css\\style-formulario.css",
   "PreviewInSolutionExplorer": false
 }
